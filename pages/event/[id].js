@@ -7,18 +7,19 @@ import {
   UsersIcon,
   LinkIcon,
 } from "@heroicons/react/outline";
+import formatTimestamp from "../../utils/formatTimestamp";
 
 function Event({ event }) {
   console.log("Event", event);
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Head>
-        <title>name | web3rsvp</title>
+        <title>{event.name} | web3rsvp</title>
         <meta name="description" content={"name"} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="relative py-12">
-        <h6 className="mb-2">time</h6>
+        <h6 className="mb-2">{formatTimestamp(event.eventTimestamp)}</h6>
         <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl mb-6 lg:mb-12">
           name
         </h1>
